@@ -14,12 +14,12 @@
 
 .layout2 {
   width: 1000px;
-  height: 200px;
+  height: 100px;
 
   display: grid;
   grid-template-rows: 0.3fr;
   grid-template-columns: repeat(5, 0.1fr);
-  gap: 1px;
+  gap: 180px;
 }
 .sidebar {
   grid-area: sidebar;
@@ -155,6 +155,7 @@
   grid-area: body;
   background-color: #100e1d;
   color: white;
+  justify-content: center;
 }
 
 /* .cards {
@@ -213,4 +214,25 @@ h4 {
   background: #ffec65;
 
   height: 7px;
+}
+
+.card2 {
+  display: flex;
+  gap: 100px;
+  justify-content: space-around;
+}
+
+.card2 > div {
+  background: #1e213a;
+  width: 100px;
+  height: 100px;
+}
+
+.card2 > div > p {
+  display: block;
+}
+
+.card2 img {
+  width: 30px;
+  height: 30px;
 }

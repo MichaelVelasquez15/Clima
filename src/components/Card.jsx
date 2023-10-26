@@ -89,31 +89,31 @@ function Card() {
             <div>
               <h4>Wind status</h4>
               <p>
-                <strong>{current.wind.speed + " mph"}</strong>
+                <strong>{current?.wind.speed + " mph"}</strong>
               </p>
             </div>
             <div className="ba">
               <h4>Humidity</h4>
               <p>
-                <strong>{current.main.humidity + " %"}</strong>
+                <strong>{current?.main.humidity + " %"}</strong>
               </p>
               <div className="barra">
                 <div
                   className="porcen"
-                  style={{ width: `${current.main.humidity}%` }}
+                  style={{ width: `${current?.main.humidity}%` }}
                 ></div>
               </div>
             </div>
             <div>
               <h4>Visibility</h4>
               <p>
-                <strong>{current.wind.gust + " milles"}</strong>
+                <strong>{current?.visibility + " milles"}</strong>
               </p>
             </div>
             <div>
               <h4>Air Pressure</h4>
               <p>
-                <strong>{current.main.pressure + " mb"}</strong>
+                <strong>{current?.main.pressure + " mb"}</strong>
               </p>
             </div>
           </div>
