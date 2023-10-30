@@ -34,7 +34,7 @@ function Top() {
             <h3>
               <strong>Tomorrow</strong>
             </h3>
-            <img src="/public/weather-app-master/Clear.png" alt="" />
+            <img src="/weather-app-master/Clear.png" alt="" />
             <strong>
               <p>{data?.list[3].main.temp_max + " °c"}</p>
             </strong>
@@ -44,7 +44,7 @@ function Top() {
           <div>
             <p>
               {" "}
-              <img src="/public/weather-app-master/Hail.png" alt="" />
+              <img src="/weather-app-master/Hail.png" alt="" />
               <strong>
                 <p>{data?.list[10].main.temp_max + " °c"}</p>
               </strong>
@@ -54,7 +54,7 @@ function Top() {
           <div>
             <p>
               {" "}
-              <img src="/public/weather-app-master/LightCloud.png" alt="" />
+              <img src="/weather-app-master/LightCloud.png" alt="" />
               <strong>
                 <p>{data?.list[18].main.temp_max + " °c"}</p>
               </strong>
@@ -64,7 +64,7 @@ function Top() {
           <div>
             <p>
               {" "}
-              <img src="/public/weather-app-master/Shower.png" alt="" />
+              <img src="/weather-app-master/Shower.png" alt="" />
               <strong>
                 <p>{data?.list[26].main.temp_max + " °c"}</p>
               </strong>
@@ -74,7 +74,7 @@ function Top() {
           <div>
             <p>
               {" "}
-              <img src="/public/weather-app-master/Snow.png" alt="" />
+              <img src="/weather-app-master/Snow.png" alt="" />
               <strong>
                 <p>{data?.list[34].main.temp_max + " °c"}</p>
               </strong>

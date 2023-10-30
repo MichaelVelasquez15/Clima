@@ -8,6 +8,35 @@ function Card() {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [current, setCurrent] = useState(null);
+  const [visible, setVisible] = useState(false);
+
+  const fecha = new Date();
+  const dias = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+  ];
+  const meses = [
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic",
+  ];
+  const dayOfWeek = dias[fecha.getDay()];
+  const day = fecha.getDate();
+  const month = meses[fecha.getMonth()];
 
   useEffect(() => {
     if (lat === null && long === null) return;
@@ -39,11 +68,26 @@ function Card() {
     navigator.geolocation.getCurrentPosition(handleSucces, handleError);
   };
 
+  const cerrar = () => {
+    setVisible(true);
+  };
+
+  const abrir = () => {
+    setVisible(false);
+  };
+
   return (
     <section className="layout">
+      {/* <nav className="bar">
+        <button onClick={cerrar}>X</button>
+        <input type="text" onChange={}/>
+        <button className="bt">Search</button>
+      </nav> */}
       <div className="sidebar">
         <nav className="nav1">
-          <button className="bt1">Search for places</button>
+          <button className="bt1" onClick={abrir}>
+            Search for places
+          </button>
           <button className="bt2" onClick={handleLocation}>
             <span className="material-symbols-outlined">my_location</span>
           </button>
@@ -65,9 +109,16 @@ function Card() {
               : current.main.temp + "°c"}
           </div>
         </div>
+        <div className="medio">
+          <div className="timepo">
+            <h3>{current?.weather[0].main}</h3>
+          </div>
 
-        <div>
-          <p>fecha hoy</p>
+          <div>
+            <h6>
+              Today . {dayOfWeek}, {day} {month}
+            </h6>
+          </div>
         </div>
 
         <div className="local">

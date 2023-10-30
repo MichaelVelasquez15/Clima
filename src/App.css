@@ -169,7 +169,7 @@
 } */
 .abajo {
   min-height: 100%;
-
+  padding-top: 50px;
   padding-left: 10%;
   justify-content: center;
   align-items: center;
@@ -225,7 +225,9 @@ h4 {
 .card2 > div {
   background: #1e213a;
   width: 100px;
-  height: 100px;
+  height: 150px;
+  text-align: center;
+  align-items: center;
 }
 
 .card2 > div > p {
@@ -235,4 +237,9 @@ h4 {
 .card2 img {
   width: 30px;
   height: 30px;
+}
+
+.medio {
+  text-align: center;
+  align-items: center;
 }
